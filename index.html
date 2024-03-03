@@ -54,7 +54,7 @@
         <!-- hero start -->
         <!-- this is hero's property min-h-screen -->
         <div class="hero bg-slate-700 rounded-xl" style="background-image: url(./asset/images/bgbanner.png);">
-            <div class="sm:flex grid sm:gap-96 w-[100%]  sm:justify-center justify-center  sm:p-9 p-3">
+            <div class="sm:flex grid sm:gap-96 gap-5 w-[100%]  sm:justify-center justify-center  sm:p-9 p-3">
                 <!-- titel and input start -->
               <div class="max-w-md text-black">
                 <h1 class="mb-5 text-5xl font-bold">welcome to the <br> <span class="bg-gradient-to-r from-purple-200 via-purple-500 to-purple-900 inline-block text-transparent bg-clip-text">WithOut</span> Forum</h1>
@@ -101,9 +101,9 @@
     </section>
     <!-- discuss section end -->
     <!-- api fetch card area start -->
-    <section class="flex justify-center gap-5 w-auto">
+    <section class="sm:flex grid justify-center gap-5 w-auto">
         <!-- all post start -->
-        <div class=" w-[50%]">
+        <div class=" sm:w-[50%] w-auto">
             <div id="loading-Spinner" class="text-center ">
                 <span class="loading loading-spinner loading-lg"></span>
             </div>
@@ -114,7 +114,7 @@
         </div>
         <!-- all post end -->
         <!-- Readed Book start -->
-        <section id="read-contener" class=" w-[50%] ">
+        <section id="read-contener" class=" sm:w-[50%] w-[100%] ">
             <div class="flex justify-between p-5 bg-white shadow-md rounded-lg">
                 <h1 class="text-3xl font-semibold">Title</h1>
                 <div class="flex items-center gap-6">
@@ -132,17 +132,17 @@
     <!-- join forum section start -->
     <div class="hero bg-gray-800 text-white rounded-xl">
         <div class="hero-content flex-col lg:flex-row-reverse">
-          <img src="./asset/images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
-          <div>
-            <h1 class="text-5xl font-bold">Join Our Forum</h1>
+          <img src="./asset/images/joinforum.png" class="sm:w-[100%] w-[80%] rounded-lg shadow-2xl" />
+          <div class="sm:text-start text-center">
+            <h1 class="sm:text-5xl text-3xl font-bold">Join Our Forum</h1>
             <p class="py-6">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
-            <button class="btn btn-primary bg-purple-500 border-none text-2xl">Registered Now</button>
+            <button class="btn btn-primary bg-purple-500 border-none sm:text-2xl">Registered Now</button>
           </div>
         </div>
       </div>
     <!-- join forum section end -->
     <!-- Aurthor area start or uptdate posts -->
-    <section id="aurthor-posts" class="grid grid-cols-3 gap-2">
+    <section id="aurthor-posts" class="grid sm:grid-cols-3 grid-cols-1 gap-2">
           
     </section>
     <!-- Aurthor area end -->

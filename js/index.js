@@ -26,11 +26,11 @@ const AllPosts = (details) => {
         post.classList.add('flex');
 
         post.innerHTML = `<div class="flex  
-        border-white bg-purple-100 p-6 w-[100%] m-4 rounded-xl">
+        border-white bg-purple-100 sm:p-6 p-2 w-[100%] sm:m-4 m-2 rounded-xl">
         <!-- indicator start -->
             <div class="avatar indicator">
                 <span class="indicator-item border-none badge ${element.isActive?'bg-green-400':'bg-red-500'} badge-secondary"></span> 
-                <div class="w-20 h-20 rounded-lg">
+                <div class="sm:w-20 w-9 sm:h-20 h-9 rounded-lg">
                     <img alt="Avatar" src="${element.image}" />
                 </div>
             </div>
@@ -39,18 +39,18 @@ const AllPosts = (details) => {
             <div class="mx-2 px-7">
                 <!-- category and author -->
                 <div class="flex gap-3 ">
-                    <p class="text-2xl">#${element.category}</p>
-                    <p class="text-2xl">Author: ${element.author.name}</p>
+                    <p class="sm:text-2xl">#${element.category}</p>
+                    <p class="sm:text-2xl">Author: ${element.author.name}</p>
                 </div>
                 <!-- title and subtitle -->
                 <div>
-                    <h1 class="text-4xl font-semibold">${element.title}</h1>
-                    <p class="text-gray-600 text-2xl">${element.description}</p>
+                    <h1 class="sm:text-4xl text-2xl font-semibold">${element.title}</h1>
+                    <p class="text-gray-600 sm:text-2xl">${element.description}</p>
                 </div>
                 <!-- icon info -->
                 <div class="line-hr w-full"></div>
-                <div class="flex gap-4 justify-between">
-                    <div class="flex gap-4 items-center">
+                <div class="flex sm:gap-4 gap-1 justify-between">
+                    <div class="flex sm:gap-4 gap-2 items-center">
                         <div class="flex items-center gap-3">
                             <i class="fa-regular fa-comment text-2xl"></i>
                             <p>${element.comment_count}</p>
@@ -97,11 +97,11 @@ const readedBook = async(id,title,view)=>{
     // console.log(id,title,view);
     const readBook=document.createElement('div');
     readBook.innerHTML=`
-    <div class="p-5 flex justify-between my-3 bg-white shadow-md rounded-lg">
+    <div class="p-5 flex justify-between sm:mx-0 mx-2 my-3 bg-white shadow-md rounded-lg">
                     <div>
-                        <h1 class="text-4xl">${title}</h1>
+                        <h1 class="sm:text-4xl text-2xl">${title}</h1>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center sm:gap-3 gap-1">
                         <i class="fa-solid fa-eye text-2xl"></i>
                         <p>${view}</p>
                     </div>
