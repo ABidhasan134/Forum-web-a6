@@ -47,23 +47,42 @@
           </div>
         <!-- nav bar end -->
    </nav>
-   <main>
+   <main class="container mx-auto gap-5 grid">
     <!-- bannar start -->
     <section>
         <!-- hero start -->
         <!-- this is hero's property min-h-screen -->
-        <div class="hero min-h-screen " style="background-image: url(./asset/images/bgbanner.png);">
-            <div class="flex justify-between">
+        <div class="hero bg-slate-700 rounded-xl" style="background-image: url(./asset/images/bgbanner.png);">
+            <div class="flex gap-96 w-[100%] justify-center  p-9">
                 <!-- titel and input start -->
               <div class="max-w-md text-black">
-                <h1 class="mb-5 text-5xl font-bold">welcome to the <br> ReTro Forum</h1>
+                <h1 class="mb-5 text-5xl font-bold">welcome to the <br> <span class="text-to-r from-cyan-500 to-blue-500 ">ReTro</span> Forum</h1>
                 <p class="mb-5">shear your best openien and get expart help</p>
-                <button class="btn btn-primary">Get Started</button>
+                
+                <label class="input input-bordered flex items-center gap-2">
+                    <input type="text" class="grow" placeholder="Search..." />
+                    <button class="btn btn-primary bg-purple-500 hover:bg-purple-700 my-10 border-none">Search</button>    
+                  </label>
               </div>
               <!-- titel and input end -->
               <!-- static layout start -->
-              <div>
-                    here
+              <div class="bg-white p-10 gap-3 rounded-lg grid items-center">
+                    <div class="flex justify-between w-48">
+                        <h1 class="text-2xl">Register User</h1>
+                        <p class="text-2xl">01</p>
+                    </div>
+                    <div class="flex justify-between w-48">
+                        <h1 class="text-2xl">Froum</h1>
+                        <p class="text-2xl">01</p>
+                    </div>
+                    <div class="flex justify-between w-48">
+                        <h1 class="text-2xl">Topic</h1>
+                        <p class="text-2xl">01</p>
+                    </div>
+                    <div class="flex justify-between w-48">
+                        <h1 class="text-2xl">Replies</h1>
+                        <p class="text-2xl">01</p>
+                    </div>
               </div>
               <!-- static layout end -->
             </div>
@@ -71,6 +90,29 @@
         <!-- hero end -->
     </section>
     <!-- bannar end -->
+    <!-- discuss section start -->
+    <section class="grid justify-center text-center mt-10">
+        <h1 class="text-3xl font-bold">Let’s Discuss</h1>
+        <p class="text-gray-500">Are you referring to a specific forum or platform, <br>
+         or do you mean discussing something within the context of two lines?
+        </p>
+
+    </section>
+    <!-- discuss section end -->
+    <!-- api fetch card area start -->
+    <section class="flex justify-center gap-5 w-auto">
+        <!-- all post start -->
+        <section id="post-contener" class=" border-4 w-[50%]" >
+            <!-- element get from API by index.js -->
+        </section>
+        <!-- all post end -->
+        <!-- Readed Book start -->
+        <section>
+            there
+        </section>
+        <!-- Readed Book end -->
+    </section>
+    <!-- api fetch card area end -->
    </main>
    <footer>
 
