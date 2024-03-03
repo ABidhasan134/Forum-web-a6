@@ -26,7 +26,7 @@ const AllPosts = (details) => {
         post.classList.add('flex');
 
         post.innerHTML = `<div class="flex  
-        border-white bg-pink-100 p-6 w-[100%] m-4 rounded-xl">
+        border-white bg-purple-100 p-6 w-[100%] m-4 rounded-xl">
         <!-- indicator start -->
             <div class="avatar indicator">
                 <span class="indicator-item border-none badge ${element.isActive?'bg-green-400':'bg-red-500'} badge-secondary"></span> 
@@ -48,6 +48,7 @@ const AllPosts = (details) => {
                     <p class="text-gray-600 text-2xl">${element.description}</p>
                 </div>
                 <!-- icon info -->
+                <div class="line-hr w-full"></div>
                 <div class="flex gap-4 justify-between">
                     <div class="flex gap-4 items-center">
                         <div class="flex items-center gap-3">
