@@ -137,4 +137,49 @@ const loadingSpinner=(isLoading)=>{
 
 }
 // adding spinner to search end
+// start load author 
+
+// end load author 
+// author information Load
+const loadAuthor = async () => {
+    try {
+        const resp = await fetch(`https://openapi.programming-hero.com/api/retro-forum/latest-posts`);
+        const data = await resp.json();
+        authourInformation(data);
+    } catch (error) {
+        console.error('Error fetching author information:', error);
+    }
+};
+
+// getting Author information from API
+const authourInformation = (data) => {
+    // Process the author information data here
+    const authorPost=document.getElementById("aurthor-posts");
+    data.map((element)=>{
+        console.log(element.author);
+        const authorCard=document.createElement('div');
+        authorCard.innerHTML = `
+        <div class="card w-auto bg-base-100 shadow-xl p-4">
+        <figure><img src="${element.cover_image}" alt="Shoes" /></figure>
+        <div class="card-body">
+            <p><i class="fa-regular fa-calendar text-2xl mx-2"></i>${element.author?.posted_date || "No publice Date"}</p>
+          <h2 class="card-title text-4xl">${element.title}</h2>
+          <p>${element.description}</p>
+          <div class="flex gap-6">
+            <img class="h-20 w-16 rounded-[100%]" src="${element.profile_image}" alt="">
+            <div>
+                <h1 class="text-3xl font-semibold">${element.author.name}</h1>
+                <p>${element.author?.designation||"unknow"}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        `
+        authorPost.appendChild(authorCard);
+    })  
+};
+
+// Call the function to load author information
+loadAuthor();
 
