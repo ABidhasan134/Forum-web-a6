@@ -21,6 +21,7 @@ const AllPosts = (details) => {
     postContener.innerHTML ="";
     // Loop through each post and create card elements
     details.forEach((element) => {
+        // console.log(element.id);
         // Create a new post element for each iteration
         const post = document.createElement('div');
         post.classList.add('flex');
@@ -65,7 +66,7 @@ const AllPosts = (details) => {
                         </div>
                     </div>
                     <div>
-                        <button onclick="readedBook('${element.id}', '${element.title}', '${element.view_count}')"><i class="fa-regular fa-envelope bg-green-400 px-2 py-1 text-2xl rounded-[50%]"></i></button>
+                        <button onclick="readedBook('${element.view_count}', '${element.id}', '${element.title.replace(/'/g, '@')}')"><i class="fa-regular fa-envelope bg-green-400 px-2 py-1 text-2xl rounded-[50%]"></i></button>
                     </div>
                 </div>
             </div>
@@ -81,11 +82,16 @@ const AllPosts = (details) => {
     // hidening spinner 
     loadingSpinner(false);
 };
+
+// const AddToList =(view,id,title)=>{
+//         // readedBook(view,id,title);
+//         console.log(view,id,title);
+//     }
 // function end of all card
 
 // function readedBook start
 const array=[];
-const readedBook = async(id,title,view)=>{
+const readedBook = async(view,id,title,)=>{
     // making all id array
     const bookNumbers= document.getElementById('bookNumber');
     array.push(id);
@@ -94,7 +100,7 @@ const readedBook = async(id,title,view)=>{
     
     // for(let i=0;i)
     const readContainer = document.getElementById('read-contener')
-    // console.log(id,title,view);
+    // console.log(view,title,id);
     const readBook=document.createElement('div');
     readBook.innerHTML=`
     <div class="p-5 flex justify-between sm:mx-0 mx-2 my-3 bg-white shadow-md rounded-lg">
@@ -157,7 +163,7 @@ const authourInformation = (data) => {
     // Process the author information data here
     const authorPost=document.getElementById("aurthor-posts");
     data.map((element)=>{
-        console.log(element.author);
+        // console.log(element.author);
         const authorCard=document.createElement('div');
         authorCard.innerHTML = `
         <div class="card w-auto bg-base-100 shadow-xl p-4">
